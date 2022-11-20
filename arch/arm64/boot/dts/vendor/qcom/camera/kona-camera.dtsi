@@ -260,7 +260,11 @@
 			hw-thd-dat = <16>;
 			hw-thd-sta = <15>;
 			hw-tbuf = <24>;
+<<<<<<< HEAD
 			hw-scl-stretch-en = <1>;
+=======
+			hw-scl-stretch-en = <0>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 			hw-trdhld = <3>;
 			hw-tsp = <3>;
 			cci-clk-src = <37500000>;
@@ -353,7 +357,11 @@
 			hw-thd-dat = <16>;
 			hw-thd-sta = <15>;
 			hw-tbuf = <24>;
+<<<<<<< HEAD
 			hw-scl-stretch-en = <1>;
+=======
+			hw-scl-stretch-en = <0>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 			hw-trdhld = <3>;
 			hw-tsp = <3>;
 			cci-clk-src = <37500000>;
@@ -430,7 +438,11 @@
 				<&apps_smmu 0x2420 0x400>,
 				<&apps_smmu 0x2421 0x400>;
 			label = "icp";
+<<<<<<< HEAD
 			qcom,iommu-dma-addr-pool = <0x17600000 0xe7900000>;
+=======
+			qcom,iommu-dma-addr-pool = <0x10c00000 0xee300000>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 			iova-region-discard = <0xdff00000 0x300000>;
 			icp_iova_mem_map: iova-mem-map {
 				iova-mem-region-firmware {
@@ -443,10 +455,17 @@
 				};
 
 				iova-mem-region-shared {
+<<<<<<< HEAD
 					/* Shared region is 268MB long */
 					iova-region-name = "shared";
 					iova-region-start = <0x7400000>;
 					iova-region-len = <0x10000000>;
+=======
+					/* Shared region is 150MB long */
+					iova-region-name = "shared";
+					iova-region-start = <0x7400000>;
+					iova-region-len = <0x9600000>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					iova-region-id = <0x1>;
 					status = "ok";
 				};
@@ -454,7 +473,11 @@
 				iova-mem-region-secondary-heap {
 					/* Secondary heap region is 1MB long */
 					iova-region-name = "secheap";
+<<<<<<< HEAD
 					iova-region-start = <0x17400000>;
+=======
+					iova-region-start = <0x10a00000>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					iova-region-len = <0x100000>;
 					iova-region-id = <0x4>;
 					status = "ok";
@@ -463,8 +486,13 @@
 				iova-mem-region-io {
 					/* IO region is approximately 3.7 GB */
 					iova-region-name = "io";
+<<<<<<< HEAD
 					iova-region-start = <0x17600000>;
 					iova-region-len = <0xe7900000>;
+=======
+					iova-region-start = <0x10c00000>;
+					iova-region-len = <0xee300000>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					iova-region-id = <0x3>;
 					iova-region-discard = <0xdff00000 0x300000>;
 					status = "ok";
@@ -473,7 +501,11 @@
 				iova-mem-qdss-region {
 					/* QDSS region is appropriate 1MB */
 					iova-region-name = "qdss";
+<<<<<<< HEAD
 					iova-region-start = <0x17500000>;
+=======
+					iova-region-start = <0x10b00000>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					iova-region-len = <0x100000>;
 					iova-region-id = <0x5>;
 					qdss-phy-addr = <0x16790000>;
@@ -613,7 +645,11 @@
 			"csiphy4", "csiphy5", "cci0", "cci1",
 			"csid0", "csid1", "csid2", "csid3",
 			"csid4", "csid5", "csid6", "ife0", "ife1",
+<<<<<<< HEAD
 			"ife2", "ife3",
+=======
+			"ife2", "ife3", "ife4", "ife5", "ife6",
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 			"custom0", "ipe0", "cam-cdm-intf0", "cpas-cdm0",
 			"bps0", "icp0", "jpeg-dma0", "jpeg-enc0", "fd0";
 
@@ -887,8 +923,45 @@
 					parent-node = <&level1_rt0_wr1>;
 				};
 
+<<<<<<< HEAD
 				ife0_rdi_all_rd: ife0-rdi-all-rd {
 					cell-index = <22>;
+=======
+				ife4_rdi_all_wr: ife4-rdi-all-wr {
+					cell-index = <22>;
+					node-name = "ife4-rdi-all-wr";
+					client-name = "ife4";
+					traffic-data =
+					<CAM_CPAS_PATH_DATA_IFE_RDI_ALL>;
+					traffic-transaction-type =
+					<CAM_CPAS_TRANSACTION_WRITE>;
+					constituent-paths =
+					<CAM_CPAS_PATH_DATA_IFE_RDI0
+					CAM_CPAS_PATH_DATA_IFE_RDI1
+					CAM_CPAS_PATH_DATA_IFE_RDI2
+					CAM_CPAS_PATH_DATA_IFE_RDI3>;
+					parent-node = <&level1_rt0_wr1>;
+				};
+
+				ife5_rdi_all_wr: ife5-rdi-all-wr {
+					cell-index = <23>;
+					node-name = "ife5-rdi-all-wr";
+					client-name = "ife5";
+					traffic-data =
+					<CAM_CPAS_PATH_DATA_IFE_RDI_ALL>;
+					traffic-transaction-type =
+					<CAM_CPAS_TRANSACTION_WRITE>;
+					constituent-paths =
+					<CAM_CPAS_PATH_DATA_IFE_RDI0
+					CAM_CPAS_PATH_DATA_IFE_RDI1
+					CAM_CPAS_PATH_DATA_IFE_RDI2
+					CAM_CPAS_PATH_DATA_IFE_RDI3>;
+					parent-node = <&level1_rt0_wr1>;
+				};
+
+				ife0_rdi_all_rd: ife0-rdi-all-rd {
+					cell-index = <24>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "ife0-rdi-all-rd";
 					client-name = "ife0";
 					traffic-data =
@@ -904,7 +977,11 @@
 				};
 
 				ife1_rdi_all_rd: ife1-rdi-all-rd {
+<<<<<<< HEAD
 					cell-index = <23>;
+=======
+					cell-index = <25>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "ife1-rdi-all-rd";
 					client-name = "ife1";
 					traffic-data =
@@ -920,7 +997,11 @@
 				};
 
 				custom0_all_rd: custom0-all-rd {
+<<<<<<< HEAD
 					cell-index = <24>;
+=======
+					cell-index = <26>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "custom0-all-rd";
 					client-name = "custom0";
 					traffic-data =
@@ -931,7 +1012,11 @@
 				};
 
 				ife0_rdi_pixel_raw_wr: ife0-rdi-pixel-raw-wr {
+<<<<<<< HEAD
 					cell-index = <25>;
+=======
+					cell-index = <27>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "ife0-rdi-pixel-raw-wr";
 					client-name = "ife0";
 					traffic-data =
@@ -947,7 +1032,11 @@
 				};
 
 				ife1_rdi_pixel_raw_wr: ife1-rdi-pixel-raw-wr {
+<<<<<<< HEAD
 					cell-index = <26>;
+=======
+					cell-index = <28>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "ife1-rdi-pixel-raw-wr";
 					client-name = "ife1";
 					traffic-data =
@@ -962,8 +1051,29 @@
 					parent-node = <&level1_rt0_wr2>;
 				};
 
+<<<<<<< HEAD
 				custom0_all_wr: custom0-all-wr {
 					cell-index = <27>;
+=======
+				ife6_rdi_all_wr: ife6-rdi-all-wr {
+					cell-index = <29>;
+					node-name = "ife6-rdi-all-wr";
+					client-name = "ife6";
+					traffic-data =
+					<CAM_CPAS_PATH_DATA_IFE_RDI_ALL>;
+					traffic-transaction-type =
+					<CAM_CPAS_TRANSACTION_WRITE>;
+					constituent-paths =
+					<CAM_CPAS_PATH_DATA_IFE_RDI0
+					CAM_CPAS_PATH_DATA_IFE_RDI1
+					CAM_CPAS_PATH_DATA_IFE_RDI2
+					CAM_CPAS_PATH_DATA_IFE_RDI3>;
+					parent-node = <&level1_rt0_wr2>;
+				};
+
+				custom0_all_wr: custom0-all-wr {
+					cell-index = <30>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "custom0-all-wr";
 					client-name = "custom0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -973,7 +1083,11 @@
 				};
 
 				ipe0_all_wr: ipe0-all-wr {
+<<<<<<< HEAD
 					cell-index = <28>;
+=======
+					cell-index = <31>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "ipe0-all-wr";
 					client-name = "ipe0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -987,7 +1101,11 @@
 				};
 
 				bps0_all_wr: bps0-all-wr {
+<<<<<<< HEAD
 					cell-index = <29>;
+=======
+					cell-index = <32>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "bps0-all-wr";
 					client-name = "bps0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -997,7 +1115,11 @@
 				};
 
 				ipe0_ref_rd: ipe0-ref-rd {
+<<<<<<< HEAD
 					cell-index = <30>;
+=======
+					cell-index = <33>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "ipe0-ref-rd";
 					client-name = "ipe0";
 					traffic-data =
@@ -1008,7 +1130,11 @@
 				};
 
 				bps0_all_rd: bps0-all-rd {
+<<<<<<< HEAD
 					cell-index = <31>;
+=======
+					cell-index = <34>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "bps0-all-rd";
 					client-name = "bps0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -1018,7 +1144,11 @@
 				};
 
 				ipe0_in_rd: ipe0-in-rd {
+<<<<<<< HEAD
 					cell-index = <32>;
+=======
+					cell-index = <35>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "ipe0-in-rd";
 					client-name = "ipe0";
 					traffic-data =
@@ -1029,7 +1159,11 @@
 				};
 
 				jpeg_enc0_all_wr: jpeg-enc0-all-wr {
+<<<<<<< HEAD
 					cell-index = <33>;
+=======
+					cell-index = <36>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "jpeg-enc0-all-wr";
 					client-name = "jpeg-enc0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -1039,7 +1173,11 @@
 				};
 
 				jpeg_dma0_all_wr: jpeg-dma0-all-wr {
+<<<<<<< HEAD
 					cell-index = <34>;
+=======
+					cell-index = <37>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "jpeg-dma0-all-wr";
 					client-name = "jpeg-dma0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -1049,7 +1187,11 @@
 				};
 
 				jpeg_enc0_all_rd: jpeg-enc0-all-rd {
+<<<<<<< HEAD
 					cell-index = <35>;
+=======
+					cell-index = <38>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "jpeg-enc0-all-rd";
 					client-name = "jpeg-enc0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -1059,7 +1201,11 @@
 				};
 
 				jpeg_dma0_all_rd: jpeg-dma0-all-rd {
+<<<<<<< HEAD
 					cell-index = <36>;
+=======
+					cell-index = <39>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "jpeg-dma0-all-rd";
 					client-name = "jpeg-dma0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -1069,7 +1215,11 @@
 				};
 
 				fd0_all_wr: fd0-all-wr {
+<<<<<<< HEAD
 					cell-index = <37>;
+=======
+					cell-index = <40>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "fd0-all-wr";
 					client-name = "fd0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -1079,7 +1229,11 @@
 				};
 
 				fd0_all_rd: fd0-all-rd {
+<<<<<<< HEAD
 					cell-index = <38>;
+=======
+					cell-index = <41>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "fd0-all-rd";
 					client-name = "fd0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -1089,7 +1243,11 @@
 				};
 
 				cpas_cdm0_all_rd: cpas-cdm0-all-rd {
+<<<<<<< HEAD
 					cell-index = <39>;
+=======
+					cell-index = <42>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "cpas-cdm0-all-rd";
 					client-name = "cpas-cdm0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -1099,7 +1257,11 @@
 				};
 
 				icp0_all_rd: icp0-all-rd {
+<<<<<<< HEAD
 					cell-index = <40>;
+=======
+					cell-index = <43>;
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 					node-name = "icp0-all-rd";
 					client-name = "icp0";
 					traffic-data = <CAM_CPAS_PATH_DATA_ALL>;
@@ -1444,11 +1606,18 @@
 			"ife_clk";
 		clocks =
 			<&clock_camcc CAM_CC_IFE_LITE_CSID_CLK_SRC>,
+<<<<<<< HEAD
+=======
+			<&clock_camcc CAM_CC_IFE_LITE_CSID_CLK>,
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 			<&clock_camcc CAM_CC_CPHY_RX_CLK_SRC>,
 			<&clock_camcc CAM_CC_IFE_LITE_CPHY_RX_CLK>,
 			<&clock_camcc CAM_CC_IFE_LITE_CLK_SRC>,
 			<&clock_camcc CAM_CC_IFE_LITE_AHB_CLK>,
+<<<<<<< HEAD
 			<&clock_camcc CAM_CC_IFE_LITE_CSID_CLK>,
+=======
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 			<&clock_camcc CAM_CC_IFE_LITE_CLK>;
 		clock-rates =
 			<400000000 0 0 0 400000000 0 0>,

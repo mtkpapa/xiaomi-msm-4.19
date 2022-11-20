@@ -16,7 +16,11 @@ First Level Node - CSIPHY device
   Definition: Should be "qcom,csiphy-v1.0",
 	"qcom,csiphy-v1.1", "qcom,csiphy-v1.2", "qcom,csiphy-v1.2.1",
 	"qcom,csiphy-v1.2.2", "qcom,csiphy-v2.0", "qcom,csiphy-v1.2.2.2",
+<<<<<<< HEAD
 	"qcom,csiphy-v1.2.3", "qcom,csiphy-v2.0.1", "qcom,csiphy".
+=======
+	"qcom,csiphy-v1.2.3", "qcom,csiphy".
+>>>>>>> b1e03b2bfc15 (Add 'arch/arm64/boot/dts/vendor/qcom/camera/' from tag 'LA.UM.9.12.r1-13500-SMxx50.0')
 
 - cell-index: csiphy hardware core index
   Usage: required
