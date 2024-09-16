@@ -359,8 +359,13 @@
 	mi,mdss-panel-delay-after-fod-hbm-off;
 	mi,mdss-panel-delay-after-fod-hbm-on;
 
+<<<<<<< HEAD
 	mi,mdss-dsi-pan-enable-smart-fps;
 	mi,mdss-dsi-smart-fps-max_framerate = <120>;
+=======
+	// mi,mdss-dsi-pan-enable-smart-fps;
+	// mi,mdss-dsi-smart-fps-max_framerate = <120>;
+>>>>>>> c0e255d3729b (Use dtsi from UtsavBalar1231's branch)
 	mi,mdss-dsi-panel-hbm-brightness = <1>;
 	mi,mdss-dsi-panel-max-brightness-clone = <6143>;
 	mi,mdss-dsi-dimlayer-brightness-alpha-lut-item-count = <21>;
